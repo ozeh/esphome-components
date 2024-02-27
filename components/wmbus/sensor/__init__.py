@@ -107,6 +107,13 @@ CONFIG_SCHEMA = cv.Schema(
             state_class=STATE_CLASS_TOTAL_INCREASING,
             icon="mdi:water",
         ),
+        cv.Optional("total_m3"): sensor.sensor_schema(
+            accuracy_decimals=3,
+            unit_of_measurement=UNIT_CUBIC_METER,
+            device_class=DEVICE_CLASS_WATER,
+            state_class=STATE_CLASS_TOTAL_INCREASING,
+            icon="mdi:water",
+        ),
         cv.Optional("target_water_m3"): sensor.sensor_schema(
             accuracy_decimals=3,
             unit_of_measurement=UNIT_CUBIC_METER,
